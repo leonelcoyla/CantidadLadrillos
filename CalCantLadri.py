@@ -52,7 +52,7 @@ def calcular_LadrillosTecho(entry_ancho_techo, entry_longitud_techo, entry_ancho
 
 
 def crear_interfaz():
-    # Crea la ventana principal
+    # Crea ventana principal
     ventana = tk.Tk()
     ventana.title("Calculadora de Ladrillos")
     ventana.geometry("620x620")
@@ -70,7 +70,7 @@ def crear_interfaz():
     label_presentacion.pack(pady=20)
     # Cargar y mostrar la imagen como logo
     try:
-        logo_image = Image.open("E:\CalCantLadri\MuroTecho.png")  # Ubicación de la imágen
+        logo_image = Image.open("E:/CalCantLadri/MuroTecho.png")  # Ubicación de la imágen
         logo_image = logo_image.resize((250, 250), Image.LANCZOS)  # Redimensiona la imagen
         logo = ImageTk.PhotoImage(logo_image)
         label_logo = tk.Label(tab_presentacion, image=logo)
@@ -83,6 +83,8 @@ def crear_interfaz():
     label_presentacion = tk.Label(tab_presentacion, text="CalCantLadri ", font=("Georgia", 28,"bold"),fg="#e69656")
     label_presentacion.pack(pady=20)
 
+    label_info = tk.Label(tab_presentacion, text="\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsta aplicación te permitirá calcular cantidad de ladrillos por metro cuadrado de manera fácil y rápida.")
+    label_info.pack(pady=10)
 
     # Pestaña  muro
     tab_muro = ttk.Frame(tab_control)
@@ -174,8 +176,8 @@ def crear_interfaz():
 
     # Cargar y mostrar la imagen como logo
     try:
-        logo_image = Image.open("E:\CalCantLadri\King-kong.png")  # Ubicación de la imagen
-        logo_image = logo_image.resize((250, 250), Image.LANCZOS)  # Redimensiiona la imágen
+        logo_image = Image.open("E:/CalCantLadri/King-kong.png")  # Ubicación de la imagen
+        logo_image = logo_image.resize((250, 250), Image.LANCZOS)  # Redimensiona la imágen
         logo = ImageTk.PhotoImage(logo_image)
         label_logo = tk.Label(tab_ayuda, image=logo)
         label_logo.pack(pady=10)
@@ -204,11 +206,14 @@ def crear_interfaz():
     label_Acerca_de.pack(pady=(1,10))
     label_Acerca_de = tk.Label(tab_Acerca_de, text= "Cálcula la cantidad de ladrillos para muro y techo por m²", font=("Arial", 11),fg="#003366")
     label_Acerca_de.pack(pady=(1,10))
-    label_Acerca_de = tk.Label(tab_Acerca_de, text= "Desarrollador : Leonel Coyla Idme", font=("Arial", 11),fg="#003366")
+    label_Acerca_de = tk.Label(tab_Acerca_de, text= "Desarrolladores : Leonel Coyla Idme", font=("Arial", 11),fg="#003366")
     label_Acerca_de.pack(pady=(1,10))
-    label_Acerca_de = tk.Label(tab_Acerca_de, text= " Elmer Coyla Idme", font=("Arial", 11),fg="#003366")
+    label_Acerca_de = tk.Label(tab_Acerca_de, text= "José Pánfilo Tito Lipa", font=("Arial", 11),fg="#003366")
     label_Acerca_de.pack(pady=(1,10))
-    label_Acerca_de = tk.Label(tab_Acerca_de, text= "Lanzamiento : 31 Octubre 2024", font=("Arial", 11),fg="#003366")
+    label_Acerca_de = tk.Label(tab_Acerca_de, text= "Elmer Coyla Idme", font=("Arial", 11),fg="#003366")
+    label_Acerca_de.pack(pady=(1,10))
+    
+    label_Acerca_de = tk.Label(tab_Acerca_de, text= "Lanzamiento : 20 Octubre 2024", font=("Arial", 11),fg="#003366")
     label_Acerca_de.pack(pady=(1,10))
     label_Acerca_de = tk.Label(tab_Acerca_de, text= "Contacto: lcoyla@unap.edu.pe", font=("Arial", 11),fg="#003366")
     label_Acerca_de.pack(pady=(1,10))
